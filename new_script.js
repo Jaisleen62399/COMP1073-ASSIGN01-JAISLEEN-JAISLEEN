@@ -3,19 +3,20 @@ const animalList = ["Lion", "Tiger", "Bear", "Shark", "Eagle"];
 const adverbList = ["Quickly", "Happily", "Carefully", "Aggressively", "Eagerly"];
 const actionList = ["Danced", "Slept", "Fought", "Sang", "Ran"];
 const locationList = ["In the jungle", "By the river", "On the mountain", "Under the stars", "Next to the volcano"];
-
+// Initialize indices for each word category
 let adjIndex = 0;
 let animalIndex = 0;
 let adverbIndex = 0;
 let actionIndex = 0;
 let locationIndex = 0;
-
+// Flags to check if a word has been selected from each category
 let isAdjSelected = false;
 let isAnimalSelected = false;
 let isAdverbSelected = false;
 let isActionSelected = false;
 let isLocationSelected = false;
 
+// Event listeners for buttons to select words from each category
 document.getElementById("adjButton").addEventListener("click", () => selectWord(1));
 document.getElementById("animalButton").addEventListener("click", () => selectWord(2));
 document.getElementById("adverbButton").addEventListener("click", () => selectWord(3));
@@ -26,6 +27,7 @@ document.getElementById("createStoryBtn").addEventListener("click", createStory)
 document.getElementById("clearStoryBtn").addEventListener("click", resetStory);
 document.getElementById("surpriseMeBtn").addEventListener("click", randomStory);
 
+// Function to select a word based on the button clicked
 function selectWord(buttonNum) {
     switch (buttonNum) {
         case 1:
@@ -72,7 +74,7 @@ function createStory() {
 
     document.getElementById("outputBox").textContent = completeStory;
 }
-
+// Function to reset all selected words and output box
 function resetStory() {
     document.getElementById("adjButton").textContent = "Adjective";
     document.getElementById("animalButton").textContent = "Animal";
@@ -91,7 +93,7 @@ function randomStory() {
         adverbList[Math.floor(Math.random() * adverbList.length)],
         actionList[Math.floor(Math.random() * actionList.length)],
         locationList[Math.floor(Math.random() * locationList.length)]
-    ].join(" ") + ".";
+    ].join(" ") + ".";// Construct the random story
 
     document.getElementById("outputBox").textContent = randomCompleteStory;
 }

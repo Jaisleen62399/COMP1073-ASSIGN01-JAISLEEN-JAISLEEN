@@ -62,4 +62,15 @@ function resetStory() {
     adjIndex = animalIndex = adverbIndex = actionIndex = locationIndex = 0;
     isAdjSelected = isAnimalSelected = isAdverbSelected = isActionSelected = isLocationSelected = false;
 }
+function randomStory() {
+    const randomCompleteStory = [
+        adjectiveList[Math.floor(Math.random() * adjectiveList.length)],
+        animalList[Math.floor(Math.random() * animalList.length)],
+        adverbList[Math.floor(Math.random() * adverbList.length)],
+        actionList[Math.floor(Math.random() * actionList.length)],
+        locationList[Math.floor(Math.random() * locationList.length)]
+    ].join(" ") + ".";
+
+    document.getElementById("outputBox").textContent = randomCompleteStory;
+}
 

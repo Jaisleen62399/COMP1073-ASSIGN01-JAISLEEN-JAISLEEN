@@ -1,8 +1,10 @@
+/* Global reset and box-sizing for consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     background-color: #3d2125a7;
     display: flex;
@@ -11,6 +13,8 @@ body {
     height: 100vh;
     font-family: 'Arial', sans-serif;
 }
+
+/* Main container redesigned with a card-style appearance */
 .main-box {
     background: #503554;
     width: 80vw;
@@ -24,6 +28,8 @@ body {
     justify-content: space-between;
     text-align: center;
 }
+
+/* Header styling to create a friendly, fun vibe */
 h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -31,6 +37,8 @@ h1 {
     color: #9ef610;
     letter-spacing: 2px;
 }
+
+/* A flexible button area centered both horizontally and vertically */
 .buttons-area {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -38,6 +46,8 @@ h1 {
     margin-top: 30px;
     padding: 20px;
 }
+
+/* Unique, gradient buttons with a modern look */
 .word-btn {
     background: linear-gradient(45deg, #d4334b, #00ffa6);
     color: #000000;
@@ -48,11 +58,13 @@ h1 {
     cursor: pointer;
     transition: background 0.3s, box-shadow 0.3s;
 }
+
 .word-btn:hover {
     background: linear-gradient(45deg, #FFD700, #9f15bb);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Story display area, emphasized with a unique border style */
 .story-display {
     background-color: #571919;
     color: #faf7f7;
@@ -65,6 +77,7 @@ h1 {
     margin: 40px 0;
     word-wrap: break-word;
 }
+
 /* Fresh action buttons with a sleek design */
 .action-btn {
     background-color: #49b65299;

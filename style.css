@@ -24,3 +24,44 @@ body {
     justify-content: space-between;
     text-align: center;
 }
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #9ef610;
+    letter-spacing: 2px;
+}
+.buttons-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    padding: 20px;
+}
+.word-btn {
+    background: linear-gradient(45deg, #d4334b, #00ffa6);
+    color: #000000;
+    font-size: 1.2rem;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+.word-btn:hover {
+    background: linear-gradient(45deg, #FFD700, #9f15bb);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.story-display {
+    background-color: #571919;
+    color: #faf7f7;
+    padding: 30px;
+    border: 4px dotted #491ac9;
+    border-radius: 15px;
+    min-height: 120px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin: 40px 0;
+    word-wrap: break-word;
+}

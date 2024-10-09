@@ -1,10 +1,8 @@
-/* Global reset and box-sizing for consistency */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background-color: #3d2125a7;
     display: flex;
@@ -13,8 +11,6 @@ body {
     height: 100vh;
     font-family: 'Arial', sans-serif;
 }
-
-/* Main container redesigned with a card-style appearance */
 .main-box {
     background: #503554;
     width: 80vw;
@@ -27,75 +23,4 @@ body {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-}
-
-/* Header styling to create a friendly, fun vibe */
-h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #9ef610;
-    letter-spacing: 2px;
-}
-
-/* A flexible button area centered both horizontally and vertically */
-.buttons-area {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    margin-top: 30px;
-    padding: 20px;
-}
-
-/* Unique, gradient buttons with a modern look */
-.word-btn {
-    background: linear-gradient(45deg, #d4334b, #00ffa6);
-    color: #000000;
-    font-size: 1.2rem;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: background 0.3s, box-shadow 0.3s;
-}
-
-.word-btn:hover {
-    background: linear-gradient(45deg, #FFD700, #9f15bb);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Story display area, emphasized with a unique border style */
-.story-display {
-    background-color: #571919;
-    color: #faf7f7;
-    padding: 30px;
-    border: 4px dotted #491ac9;
-    border-radius: 15px;
-    min-height: 120px;
-    font-size: 1.8rem;
-    font-weight: 500;
-    margin: 40px 0;
-    word-wrap: break-word;
-}
-
-/* Fresh action buttons with a sleek design */
-.action-btn {
-    background-color: #49b65299;
-    color: #fff;
-    padding: 15px 40px;
-    font-size: 1.4rem;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s, box-shadow 0.3s;
-}
-
-.action-btn:hover {
-    background-color: #322bb0;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* Margin adjustment to ensure buttons don't stick too closely */
-.action-btn + .action-btn {
-    margin-left: 10px;
 }

@@ -25,3 +25,41 @@ document.getElementById("locationButton").addEventListener("click", () => select
 document.getElementById("createStoryBtn").addEventListener("click", createStory);
 document.getElementById("clearStoryBtn").addEventListener("click", resetStory);
 document.getElementById("surpriseMeBtn").addEventListener("click", randomStory);
+
+function selectWord(buttonNum) {
+    switch (buttonNum) {
+        case 1:
+            document.getElementById("adjButton").textContent = adjectiveList[adjIndex++];
+            isAdjSelected = true;
+            if (adjIndex === adjectiveList.length) adjIndex = 0;
+            break;
+        // Similar cases for other button numbers...
+    }
+}
+function createStory() {
+    if (!isAdjSelected || !isAnimalSelected || !isAdverbSelected || !isActionSelected || !isLocationSelected) {
+        alert("Make sure you select a word from each category!");
+        return;
+    }
+
+    const completeStory = [
+        document.getElementById("adjButton").textContent,
+        document.getElementById("animalButton").textContent,
+        document.getElementById("adverbButton").textContent,
+        document.getElementById("actionButton").textContent,
+        document.getElementById("locationButton").textContent
+    ].join(" ") + ".";
+
+    document.getElementById("outputBox").textContent = completeStory;
+}
+function resetStory() {
+    document.getElementById("adjButton").textContent = "Adjective";
+    document.getElementById("animalButton").textContent = "Animal";
+    document.getElementById("adverbButton").textContent = "Adverb";
+    document.getElementById("actionButton").textContent = "Action";
+    document.getElementById("locationButton").textContent = "Location";
+    document.getElementById("outputBox").textContent = "";
+    adjIndex = animalIndex = adverbIndex = actionIndex = locationIndex = 0;
+    isAdjSelected = isAnimalSelected = isAdverbSelected = isActionSelected = isLocationSelected = false;
+}
+
